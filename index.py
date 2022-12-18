@@ -45,6 +45,11 @@ LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
+@app.route("/", methods=['GET'])
+def index():
+	moji = u"こんにちは、ビ研です"
+
+	return "<h1>Tsugabot Home</h1>"
 
 @app.route("/callback", methods=['POST'])
 def callback():
