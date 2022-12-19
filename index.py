@@ -49,7 +49,7 @@ handler = WebhookHandler(LINE_CHANNEL_SECRET)
 def index():
 	moji = u"こんにちは、ビ研です"
 
-	return "<h1>Tsugabot Home</h1>"
+	return "<h1>Tsugabot Home test1</h1>"
 
 @app.route("/callback", methods=['POST'])
 def callback():
